@@ -4,7 +4,7 @@ def score_server():
     scoreserver = Flask(__name__)
     @scoreserver.route("/")
     def showscore():
-        scores = open('Scores.txt','r')
+        scores = open('Scores.txt', 'r')
         SCORE  = scores.readline()
         return (f'''<html>
                     <head>

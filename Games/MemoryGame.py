@@ -4,20 +4,22 @@ import time
 
 def generate_sequence(difficulty):
     difficulty = int(difficulty)
-    random_list = range(difficulty)
+    random_list =list(range(difficulty))
+
     for index in random_list:
-        index = random.randrange(1, 101)
-        print(f"\r{random_list}", end=' ')
-        time.sleep(0.7)
+        random_list[index] = random.randrange(1, 101)
+        print(f"\r{random_list[index]}", end=' ')
+        time.sleep(1)
         print("\r ")
     return random_list
 
 
 def get_list_from_user(difficulty):
-    user_list = range(difficulty)
-    print("please insert numbers in the same amount as the difficulty you chose\n")
+    user_list = list(range(difficulty))
+    print("please insert the numbers from first to last and press enter after inserting the number\n")
     for index in user_list:
-        index = input("\n")
+        user_list[index] = input("\n")
+        user_list[index] = int(user_list[index])
     return user_list
 
 

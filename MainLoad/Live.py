@@ -1,5 +1,5 @@
-import GuessGame, CurrencyRouletteGame, MemoryGame, Score
-
+from ScoresDirectory import Score
+from Games import CurrencyRouletteGame, GuessGame, MemoryGame
 
 
 def playAgain(restart):
@@ -17,7 +17,7 @@ def welcome(name):
 def load_game():
     check = False
     while not check:
-        game_input = input('''Please choose a game to play:\n
+        game_input = input('''Please choose a game to play by insert number from 1 to 3:\n
                            1. Memory Game - a sequence of numbers will appear for 1 second and you have to guess it back\n
                            2. Guess Game - guess a number and see if you chose like the computer\n
                            3. Currency Roulette - try and guess the value of a random amount of USD in ILS\n''')
